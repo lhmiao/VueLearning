@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #29313a;
+}
+
+#toDoList {
+    margin: 20px auto 0px auto;
+    width: 500px;
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+
+.toDoList-label {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+    border-bottom: 1px solid #9babbd;
+}
+
+.toDoList-input {
+    flex: 1 1 auto;
+    margin-left: 20px;
+    border: 1px solid #b8b8b8;
+    border-bottom: 2px solid #38f;
+}
+
+.toDoList-input:focus {
+    outline: 1px solid #306abcb5;
+}
+
+.todo-title,
+.done-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-title {
+    margin: 10px 0px;
+}
+
+.done-title {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #9babbd;
+}
+
+.item-count {
+    font-weight: bold;
+}
+
+.todo-item,
+.done-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #9babbd;
+}
+
+.todo-list>li:nth-last-of-type(1) {
+    margin-bottom: 15px;
+}
+
+.todo-item {
+    border-left: 5px solid #2c88b8;
+}
+
+.done-item {
+    border-left: 5px solid #b82c2c;
+}
+
+.finish-button,
+.delete-button,
+.revoke-button {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.finish-button:hover,
+.delete-button:hover,
+.revoke-button:hover {
+    cursor: pointer;
+}
+
+.finish-button:focus,
+.delete-button:focus,
+.revoke-button:focus {
+    outline: none;
+}
+
+.finish-button {
+    background-color: #339740;
+}
+
+.finish-button:hover {
+    background-color: #246a2d;
+}
+
+.delete-button {
+    background-color: #be4040;
+}
+
+.delete-button:hover {
+    background-color: #953030;
+}
+
+.revoke-button {
+    background-color: #898383;
+}
+
+.revoke-button:hover {
+    background-color: #686464;
+}

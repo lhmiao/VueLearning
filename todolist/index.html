@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="toDoList">
+        <label for="" class="toDoList-label">
+            ToDoList:
+            <input type="text" class="toDoList-input" placeholder="请输入待办事件，按回车键添加" v-model="newItem" @keyup.enter="addNewItem">
+        </label>
+        <div class="todo-title"><h2>正在进行</h2><span class="item-count">{{todoList.length}}</span></div>
+        <ul class="todo-list">
+            <li class="todo-item" v-for="(item, index) in todoList">
+                <span>{{item}}</span>
+                <span>
+                    <button type="button" class="finish-button" @click="finishItem(index)">完成</button>
+                    <button type="button" class="delete-button" @click="deleteTodoItem(index)">删除</button>
+                </span>
+            </li>
+        </ul>
+        <div class="done-title"><h2>已经完成</h2><span class="item-count">{{doneList.length}}</span></div>
+        <ul done-list>
+            <li class="done-item" v-for="(item, index) in doneList">
+                <span>{{item}}</span>
+                <span>
+                    <button type="button" class="revoke-button" @click="revokeDoneItem(index)">撤销</button>
+                    <button type="button" class="delete-button" @click="deleteDoneItem(index)">删除</button>
+                </span>
+            </li>
+        </ul>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="index.js"></script>
+</body>
+</html>
