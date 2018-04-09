@@ -6,10 +6,12 @@
 }
 
 #toDoList {
-    margin: 20px auto 0px auto;
-    width: 500px;
+    display: inline-block;
+    min-width: 500px;
+    margin: 20px 0px 0px 50%;
     border: 1px solid #bbb;
     padding: 10px;
+    transform: translate(-50%);
 }
 
 .toDoList-label {
@@ -23,6 +25,7 @@
 .toDoList-input {
     flex: 1 1 auto;
     margin-left: 20px;
+    padding: 5px;
     border: 1px solid #b8b8b8;
     border-bottom: 2px solid #38f;
 }
